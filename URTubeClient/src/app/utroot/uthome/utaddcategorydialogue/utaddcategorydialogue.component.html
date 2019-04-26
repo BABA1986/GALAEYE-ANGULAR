@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Add Category</h2>
+<div mat-dialog-content>
+	<div>
+		<mat-form-field> <input matInput
+			[(ngModel)]="data.mCategoryTitle" placeholder="Enter Category Title"
+			[formControl]="mDialogueFormCtr" required> <mat-error
+			*ngIf="mDialogueFormCtr.hasError('required')">Category
+		title is required. </mat-error> </mat-form-field>
+	</div>
+	<div class="categoryindexfield">
+		<mat-form-field> <mat-select
+			placeholder="Add After" [(ngModel)]="data.mAddAfterCategory"> <mat-option
+			*ngFor="let category of data.mAddedCatagories" [value]="category">
+		{{category.mCategory.mCategoryName}} </mat-option> </mat-select> </mat-form-field>
+	</div>
+	<div>
+		<mat-slide-toggle [checked]="data.mIsNotificationOn"
+			[(ngModel)]="data.mIsNotificationOn"> Send Push
+		Notification </mat-slide-toggle>
+	</div>
+</div>
+<br>
+<div mat-dialog-actions align="end">
+	<button mat-button (click)="onCancelClick()">Cancel</button>
+	<button mat-button (click)="onOkClick()" cdkFocusInitial>Ok</button>
+</div>

@@ -1,0 +1,37 @@
+.msgcontent {
+  vertical-align:middle;
+  display: table-cell;
+}
+
+.msgcontainer {
+	margin:auto;
+    height: 150px;
+    width: 100%;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: table;
+}
+
+.msgicon{
+	display: block;
+	height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading{
+    font-size: 25px;
+    text-align: center;
+    color: #dedede;
+}
+
+.description{
+    font-size: 18px;
+    text-align: center;
+    color: #dedede;
+    white-space: pre-wrap;
+}

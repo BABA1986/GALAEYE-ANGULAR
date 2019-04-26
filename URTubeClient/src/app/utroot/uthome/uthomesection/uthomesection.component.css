@@ -1,0 +1,50 @@
+div.section{
+/* 	margin-top: 10px;
+ */	height: 45px;
+  background-color: rgb(243, 243, 243);
+}
+
+div.sectionheader{
+	border-left-style: solid;
+	border-left-width: 5px;
+    border-left-color: rgb(63, 81, 170);
+    overflow: hidden;
+}
+
+div.section div span{
+	margin-left: 14px;
+	font-size: 20px;
+	line-height: 45px; 
+	vertical-align: middle;
+}
+
+div.section-card-div {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  display: flex;
+  overflow-x: auto;
+}
+
+div.section-card-div div {
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    margin-left : 10px;
+      display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+}
+
+a.section-action{
+	display: inline;
+	align: right;
+}
+
+.snakbar{
+  vertical-align: middle;
+    position: relative;
+  display: block;
+  background-color: yellow;
+  width: 100%;
+}

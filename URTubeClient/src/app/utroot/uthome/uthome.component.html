@@ -1,0 +1,20 @@
+<div class="home-div" #homecontent>
+    <div *ngIf="mIsError; else homecontent">
+        <app-utembededmsg [mTitle]="'OOPS. Something went wrong'" [mDesc]="'Network connection seems poor try again.\nCheck your internet connection.'"
+            [mImagePath]="'assets/error.png'"></app-utembededmsg>
+    </div>
+    <ng-template #homecontent>
+        <div class="sectioncontainer" *ngFor="let lCategoryInfo of mCategories">
+            <app-uthomesection [mCategoryInfo]=lCategoryInfo (mDeleteVideoInSectionFun)="deleteVideo($event)"
+                (mAddEditVideoInSectionDialogueFun)="showAddEditVideoDialogue($event)" (mEditSectionDialogueFun)="showCategoryEditDialogue($event)" (mDeleteCategoryFun)="deleteCategoryFun($event)">
+            </app-uthomesection>
+        </div>
+
+    </ng-template>
+    <div id="addbtndiv">
+        <button class="addbtnclick" (click)="showCategoryAddDialogue()">
+            <img class="addbtn" src="/assets/add-circle.png" />
+        </button>
+    </div>
+
+</div>

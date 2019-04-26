@@ -1,0 +1,24 @@
+.section-card {
+	width: 250px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;  
+    vertical-align: middle;
+    position: relative;
+    overflow:hidden;
+}
+
+div.snakbar {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height:25px;
+    background-color: #4153af;
+    display: table;
+}
+
+#snakbarcontent {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+}

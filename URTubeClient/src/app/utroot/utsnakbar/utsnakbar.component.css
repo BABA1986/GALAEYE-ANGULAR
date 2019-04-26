@@ -1,0 +1,23 @@
+.utsnakbar {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height:25px;
+    background-color: #4153af;
+    display: table;
+    z-index: 100000;
+}
+
+#utsnakbarcontent {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+
+.snakicon {
+    color: white;
+}
+
+#utsnakbarcontent span {
+    color: white;
+}

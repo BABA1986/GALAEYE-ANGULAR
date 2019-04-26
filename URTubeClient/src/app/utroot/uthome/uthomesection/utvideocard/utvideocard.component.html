@@ -1,0 +1,15 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="section-card">
+	<div>
+		<ng-container #ref> <mat-card fxFlex> 
+		<span align="left">{{mVideoInfo.mVideoId}}</span> <mat-card-actions
+			align="end">
+		<button mat-icon-button (click)="editCard()">
+			<mat-icon>edit</mat-icon>
+		</button>
+		<button mat-icon-button (click)="deleteCard()">
+			<mat-icon>delete</mat-icon>
+		</button>
+		</mat-card-actions> </mat-card> </ng-container>
+	</div>
+	<app-utsnakbar (mOkClickedFun)="snakbarOkClickedFun($event)" (mCancelClickedFun)="snakbarCancelClickedFun($event)"></app-utsnakbar>
+</div>

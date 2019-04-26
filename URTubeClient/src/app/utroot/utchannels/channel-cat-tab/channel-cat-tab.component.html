@@ -1,0 +1,16 @@
+        <span class = "tab-bar-item">
+        <mat-icon class="example-tab-icon">{{mMemuInfo.mMenuIcon}}</mat-icon>
+        {{mMemuInfo.mMenuTitle}}
+        <span class="actionitems">
+        <button class="section-action" style="float: right;" mat-icon-button (click)="editCategory()">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button class="section-action" style="float: right;" mat-icon-button (click)="addNewChannel()">
+          <mat-icon>add</mat-icon>
+        </button>
+        <button class="section-action" style="float: right;" mat-icon-button (click)="deletecategory()">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </span>
+        <app-utsnakbar class="snakbar" (mOkClickedFun)="snakbarOkClickedFun($event)" (mCancelClickedFun)="snakbarCancelClickedFun($event)"></app-utsnakbar>
+        </span>

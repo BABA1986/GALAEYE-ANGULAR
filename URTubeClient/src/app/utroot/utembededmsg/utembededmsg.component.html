@@ -1,0 +1,21 @@
+<div class="msgcontainer" [ngStyle]="{ 'position': mMessagePosition }">
+<div class="msgcontent">
+<div *ngIf="mImagePath?.length <= 0; else imageicon">
+</div> 
+<ng-template #imageicon>
+<img class = "msgicon" src = {{mImagePath}}><br>
+</ng-template>
+	
+<div *ngIf="mTitle?.length <= 0; else title">
+</div> 
+<ng-template #title>
+<div class ="heading">{{mTitle}}</div>
+</ng-template>
+
+<div *ngIf="mDesc?.length <= 0; else description">
+</div>
+<ng-template #description>
+<div class ="description">{{mDesc}}</div>
+</ng-template>
+</div>
+</div>

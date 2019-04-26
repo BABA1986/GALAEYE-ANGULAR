@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Submit Video</h2>
+<div mat-dialog-content>
+	<mat-form-field> <input matInput
+		[(ngModel)]="data.mVideoId" placeholder="Enter Video Id"
+		[formControl]="mDialogueFormCtr" required> <mat-error
+		*ngIf="mDialogueFormCtr.hasError('required')">Enter a valid Youtube Video ID. </mat-error> </mat-form-field>
+	<div>
+		<mat-slide-toggle [checked]="data.mIsNotificationOn" [(ngModel)]="data.mIsNotificationOn"> Send Push Notification </mat-slide-toggle>
+	</div>
+</div>
+<br>
+<div mat-dialog-actions align="end">
+	<button mat-button (click)="onCancelClick()">Cancel</button>
+	<button mat-button (click)="onOkClick()" cdkFocusInitial>Ok</button>
+</div>

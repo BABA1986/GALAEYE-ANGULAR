@@ -1,0 +1,28 @@
+<div>
+  <div *ngIf="mIsError; else channelcontent">
+    <app-utembededmsg [mTitle]="'OOPS. Something went wrong'" [mDesc]="'Network connection seems poor try again.\nCheck your internet connection.'"
+      [mImagePath]="'assets/error.png'"></app-utembededmsg>
+  </div>
+  <ng-template #channelcontent>
+    <mat-tab-group>
+      <mat-tab *ngFor="let lMenu of mMenus">
+      <ng-template mat-tab-label>
+        <app-channel-cat-tab [mMemuInfo] = 'lMenu' (mDeleteMenuEventFun)="deleteMenu($event)" (mEditMenuEventFun)="editMenu($event)" (mAddSubMenuEventFun)="addSubMenu($event)"></app-channel-cat-tab>
+      </ng-template>
+        <mat-grid-list cols="4" [cols]="mColumns" rowHeight="3:2" (window:resize)="onResize($event)">
+            <mat-grid-tile *ngFor="let lSubMenu of lMenu.mSubMenus">
+              <mat-card fxFlex class="gridcard">
+                <span class="titleheading">{{lSubMenu.mSubMenuTitle}}</span>
+                <div class="subheading">{{lSubMenu.mMediaSrc}}</div>
+              </mat-card>
+            </mat-grid-tile>
+          </mat-grid-list>    
+      </mat-tab>
+    </mat-tab-group>
+  </ng-template>
+  <div id="addbtndiv">
+    <button class="addbtnclick" (click)="showMenuAddDialogue()">
+      <img class="addbtn" src="/assets/add-circle.png" />
+    </button>
+  </div>
+</div>
